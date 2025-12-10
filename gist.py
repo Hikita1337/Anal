@@ -2,16 +2,27 @@ import os
 import requests
 import subprocess
 import shutil
+import gdown  # pip install gdown
 
 # -----------------------------
 # Настройки
 # -----------------------------
-GITHUB_TOKEN = "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"  # токен с правами gist
+TOKEN_FILE_URL = "https://drive.google.com/uc?id=1tuUxUWEfumOsUdJEk5q48SW5xlLXc187&export=download"
+LOCAL_TOKEN_FILE = "github_token.txt"
 REPO_URL = "https://github.com/Hikita1337/Anal.git"  # URL репозитория
 LOCAL_REPO_DIR = "AnalRepo"  # временная папка для клона
 FILE_PATH_IN_REPO = "History/timeline1.txt"  # путь к файлу внутри репозитория
 GIST_DESCRIPTION = "Полный timeline1.txt для анализа API"
 GIST_PUBLIC = True  # True = публичный Gist, False = приватный
+
+# -----------------------------
+# Скачиваем токен
+# -----------------------------
+if not os.path.exists(LOCAL_TOKEN_FILE):
+    gdown.download(TOKEN_FILE_URL, LOCAL_TOKEN_FILE, quiet=False)
+
+with open(LOCAL_TOKEN_FILE, "r", encoding="utf-8") as f:
+    GITHUB_TOKEN = f.read().strip()
 
 # -----------------------------
 # Клонируем репозиторий
