@@ -1,7 +1,8 @@
 import re
+import os
 
 # Параметры
-INPUT_FILE = "timeline1.txt"   # путь к твоему файлу с хронологией
+INPUT_FILE = os.path.join("history", "timeline1.txt")  # путь к твоему файлу
 DOMAINS = ["cs2run.app", "csgoih.run"]
 URL_REGEX = re.compile(r"https?://[^\s\"']+")
 
@@ -18,14 +19,14 @@ def main():
             urls = extract_urls_from_line(line)
             for u in filter_domains(urls, DOMAINS):
                 found.append(u)
-    # удаляем дубли, сохраняем порядок появления
+    # удаляем дубли, сохраняя порядок
     unique = []
     seen = set()
     for u in found:
         if u not in seen:
             seen.add(u)
             unique.append(u)
-    # выводим
+    # вывод
     for u in unique:
         print(u)
 
