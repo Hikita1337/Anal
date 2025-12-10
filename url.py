@@ -2,7 +2,7 @@ import re
 import os
 
 # Параметры
-INPUT_FILE = os.path.join("history", "timeline1.txt")  # путь к твоему файлу
+INPUT_FILE = os.path.join("History", "timeline1.txt")  # путь к твоему файлу
 DOMAINS = ["cs2run.app", "csgoih.run"]
 URL_REGEX = re.compile(r"https?://[^\s\"']+")
 
