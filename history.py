@@ -9,7 +9,7 @@ import gdown
 ZIP_FILE = "http.zip"
 BASE_DIR = "http"
 OUTPUT_DIR = "History"
-OUTPUT_FILE = os.path.join(OUTPUT_DIR, "timeline.txt")
+OUTPUT_FILE = os.path.join(OUTPUT_DIR, "timeline1.txt")
 
 # ТВОЙ GOOGLE DRIVE ID
 GDRIVE_ID = "10ClYKixNN2B-k0RFX_3IcNKDvzoEqCXI"
@@ -155,16 +155,15 @@ def build_timeline():
     print(GREEN + f"[OK] История сформирована → {OUTPUT_FILE}" + RESET)
 
 
-def git_push_lfs():
-    print(GREEN + "[STEP] Публикация в GitHub через LFS…" + RESET)
+def git_push():
+    print(GREEN + "[STEP] Публикация в GitHub обычным способом…" + RESET)
 
-    subprocess.run(["git", "lfs", "track", OUTPUT_FILE])
-    subprocess.run(["git", "add", ".gitattributes"])
     subprocess.run(["git", "add", OUTPUT_FILE])
     subprocess.run(["git", "commit", "-m", "Add processed timeline"])
     subprocess.run(["git", "push"])
 
     print(GREEN + "[OK] Успешно отправлено в GitHub" + RESET)
+
 
 
 if __name__ == "__main__":
