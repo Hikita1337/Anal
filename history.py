@@ -171,5 +171,5 @@ if __name__ == "__main__":
     unzip_if_needed()
     cleanup_junk()
     build_timeline()
-    git_push_lfs()
+    git_push()
     print(BLUE + "[DONE] Процесс полностью завершён" + RESET)
