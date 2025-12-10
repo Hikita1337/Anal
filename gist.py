@@ -6,7 +6,7 @@ import shutil
 # -----------------------------
 # Настройки
 # -----------------------------
-GITHUB_TOKEN = "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"  # токен с правами gist
+GITHUB_TOKEN = "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"  # токен с правами gist
 REPO_URL = "https://github.com/Hikita1337/Anal.git"  # URL репозитория
 LOCAL_REPO_DIR = "AnalRepo"  # временная папка для клона
 FILE_PATH_IN_REPO = "History/timeline1.txt"  # путь к файлу внутри репозитория
