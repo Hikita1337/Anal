@@ -26,30 +26,7 @@ import time
 from pathlib import Path
 import urllib.request
 import json
-import urllib.request
 
-
-parser = argparse.ArgumentParser()
-parser.add_argument("--source", default="https://github.com/Hikita1337/Anal/raw/refs/heads/main/2025-12-09_09-42-51-297323.js", help="URL или локальный файл")
-args = parser.parse_args()
-
-source = args.source
-local_file = source.split("/")[-1]
-
-# Проверяем локальный файл в репо
-if os.path.exists(local_file):
-    print(f"[magic_restore] Используем локальный файл: {local_file}")
-    source_path = local_file
-else:
-    # Если файла нет — скачиваем
-    print(f"[magic_restore] Файл не найден локально, скачиваем {source} ...")
-    urllib.request.urlretrieve(source, local_file)
-    source_path = local_file
-
-# Дальше используем source_path в скрипте вместо source
-print(f"[magic_restore] Работаем с файлом: {source_path}")
-
-# --- далее оставшийся код magic.py ---
 ROOT = Path.cwd()
 TOOLS = ROOT / "tools"
 WORK = ROOT / "magic_restore_work"
