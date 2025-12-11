@@ -63,7 +63,7 @@ const srcContent = fs.readFileSync(src,'utf8');
 const bname = path.basename(src);
 const out1 = path.join(outdir, bname + ".beautified.js");
 try {
-  child.execSync(`npx js-beautify "${src}" -o "${out1}" --indent-size 2`, {stdio:'inherit'});
+  child.execSync(`npx --yes js-beautify "${src}" -o "${out1}" --indent-size 2`, {stdio:'inherit'});
 } catch(e) {
   const naive = srcContent.replace(/;/g, ';\n').replace(/\{/g,'{\n').replace(/\}/g,'}\n');
   fs.writeFileSync(out1, naive, 'utf8');
