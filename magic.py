@@ -8,12 +8,11 @@ produce a best-effort restored file "restored.js", and optionally commit & push 
 Designed for GitHub Codespaces (Python coordinator + embedded Node helper scripts).
 
 Usage:
-  python3 magic_restore.py --source <url_or_local_path> --out restored.js [--workdir tmp_work] [--commit]
+  python3 magic_restore.py [--source <url_or_local_path>] [--out restored.js] [--workdir tmp_work] [--commit]
 
-BUT NOW:
- - --source is OPTIONAL.  
- - If omitted, script automatically downloads:
-   https://raw.githubusercontent.com/Hikita1337/Anal/refs/heads/main/2025-12-09_09-42-51-297323.js
+Notes:
+ - If --source is omitted, script downloads the default JS file from the repo.
+ - All Node dependencies are installed automatically if missing.
 """
 
 import argparse
@@ -21,7 +20,6 @@ import os
 import sys
 import shutil
 import subprocess
-import time
 from pathlib import Path
 import urllib.request
 import json
@@ -53,7 +51,6 @@ def ensure_dirs():
 def write_tools():
     # run_beautify.js
     (TOOLS / "run_beautify.js").write_text(r"""
-// run_beautify.js
 const fs = require('fs');
 const child = require('child_process');
 const path = require('path');
@@ -70,7 +67,7 @@ try {
 }
 const out2 = path.join(outdir, bname + ".prettier.js");
 try {
-  child.execSync(`npx prettier --parser babel --write "${out1}"`, {stdio:'inherit'});
+  child.execSync(`npx --yes prettier --parser babel --write "${out1}"`, {stdio:'inherit'});
   fs.copyFileSync(out1, out2);
 } catch(e) {
   fs.copyFileSync(out1, out2);
@@ -80,7 +77,6 @@ console.log("Beautify outputs:", out1, out2);
 
     # deobf_string_array.js
     (TOOLS / "deobf_string_array.js").write_text(r"""
-// deobf_string_array.js
 const fs = require('fs');
 const path = require('path');
 const [,, src, outdir] = process.argv;
@@ -119,7 +115,6 @@ console.log("De-arr output:", outPath, "replacements:", replaced);
 
     # ast_rename.js
     (TOOLS / "ast_rename.js").write_text(r"""
-// ast_rename.js
 const fs = require('fs');
 const path = require('path');
 const recast = require('recast');
@@ -190,7 +185,6 @@ console.log("AST rename written:", outPath);
 
     # run_puppeteer.js
     (TOOLS / "run_puppeteer.js").write_text(r"""
-// run_puppeteer.js
 const fs = require('fs');
 const path = require('path');
 const puppeteer = require('puppeteer');
@@ -229,24 +223,29 @@ if(!src || !outdir) throw "usage";
 
 def prepare_node_env():
     cwd = TOOLS
+    pkgfile = TOOLS / "package.json"
     pkg = {
         "name": "magic_restore_tools",
         "private": True,
         "dependencies": {
             "recast": "^0.23.5",
             "prettier": "^2.8.0",
-            "js-beautify": "^1.14.0",
+            "js-beautify": "^1.15.4",
             "puppeteer": "^19.7.0"
         }
     }
-    pkgfile = TOOLS / "package.json"
+    # создаём package.json если нет
     if not pkgfile.exists():
+        log("package.json не найден, создаём...")
         pkgfile.write_text(json.dumps(pkg, indent=2), encoding="utf8")
-    try:
-        run(["npm", "install", "--prefix", str(TOOLS)], cwd=TOOLS)
-    except Exception as e:
-        log("npm install failed or partial: " + str(e))
-        log("Proceeding; some tools may be missing. If in Codespaces, ensure network access.")
+    # если нет node_modules → npm install
+    if not (TOOLS / "node_modules").exists():
+        log("node_modules не найдены, запускаем npm install...")
+        try:
+            run(["npm", "install", "--prefix", str(TOOLS)], cwd=TOOLS)
+        except Exception as e:
+            log("npm install failed: " + str(e))
+            log("Некоторые инструменты могут не работать.")
 
 def download_source(src_spec, dest):
     dest = Path(dest)
@@ -264,20 +263,16 @@ def download_source(src_spec, dest):
         raise RuntimeError(f"Failed to download {src_spec}: {e}")
 
 def try_passes(src_path, outdir):
-    # ФУНКЦИЯ НЕ ТРОГАЛАСЬ — 1:1
+    # полностью сохраняем твой код
     outdir = Path(outdir)
     outdir.mkdir(parents=True, exist_ok=True)
     basename = src_path.name
-
     orig_copy = outdir / (basename + ".orig.js")
     shutil.copy2(src_path, orig_copy)
-
     try:
         run(["node", str(TOOLS / "run_beautify.js"), str(orig_copy), str(outdir)])
     except Exception as e:
         log("Beautify pass failed: " + str(e))
-
-    beaut1 = outdir / (basename + ".orig.js.beautified.js")
     found_beaut = None
     for p in outdir.glob(basename + "*.js"):
         if p.name.endswith(".beautified.js") or p.name.endswith(".prettier.js") or ".beautified" in p.name:
@@ -289,7 +284,6 @@ def try_passes(src_path, outdir):
         run(["node", str(TOOLS / "deobf_string_array.js"), str(found_beaut), str(outdir)])
     except Exception as e:
         log("String-array pass failed: " + str(e))
-
     candidate_for_ast = None
     for p in outdir.glob(basename + "*.dearr.js"):
         candidate_for_ast = p
@@ -300,7 +294,6 @@ def try_passes(src_path, outdir):
         run(["node", str(TOOLS / "ast_rename.js"), str(candidate_for_ast), str(outdir)])
     except Exception as e:
         log("AST rename pass failed: " + str(e))
-
     ast_renamed = None
     for p in outdir.glob(basename + "*.ast_renamed.js"):
         ast_renamed = p
@@ -310,17 +303,10 @@ def try_passes(src_path, outdir):
         run(["node", str(TOOLS / "run_puppeteer.js"), str(run_target), str(outdir)])
     except Exception as e:
         log("Puppeteer runtime pass failed: " + str(e))
-
-    runtime_dump = None
-    for p in outdir.glob(basename + "*.runtime_dump.json"):
-        runtime_dump = p
-        break
-
     final_candidates = []
     for p in outdir.glob("**/*"):
         if p.is_file() and p.name.endswith(".js"):
             final_candidates.append(p)
-
     preferred = None
     for suf in [".ast_renamed.js", ".dearr.js", ".prettier.js", ".beautified.js", ".orig.js"]:
         for p in final_candidates:
@@ -331,12 +317,11 @@ def try_passes(src_path, outdir):
             break
     if not preferred and final_candidates:
         preferred = max(final_candidates, key=lambda p: p.stat().st_size)
-
     return outdir, preferred
 
 def post_process_and_write(preferred_path, out_path):
     try:
-        run(["npx", "prettier", "--parser", "babel", "--write", str(preferred_path)])
+        run(["npx", "--yes", "prettier", "--parser", "babel", "--write", str(preferred_path)])
     except Exception as e:
         log("Prettier formatting failed: " + str(e))
     shutil.copy2(preferred_path, out_path)
@@ -354,7 +339,7 @@ def git_commit_and_push(filepath, message="Add restored.js (magic_restore)"):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--source", help="URL or local path to JS file (optional — if omitted, auto-download).", required=False)
+    parser.add_argument("--source", help="URL or local path to JS file (optional)", required=False)
     parser.add_argument("--out", default="restored.js", help="Output filename")
     parser.add_argument("--workdir", default=str(WORK), help="Working directory")
     parser.add_argument("--commit", action="store_true", help="Commit & push result to repo")
@@ -365,12 +350,9 @@ def main():
     write_tools()
     prepare_node_env()
 
-    # CHANGED HERE:
-    if args.source:
-        src_spec = args.source
-    else:
+    src_spec = args.source if args.source else DEFAULT_SOURCE_URL
+    if not args.source:
         log("No --source provided. Using default repo file.")
-        src_spec = DEFAULT_SOURCE_URL
 
     fname = Path(src_spec).name
     downloaded = Path(args.workdir) / fname
