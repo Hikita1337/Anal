@@ -9,7 +9,7 @@ import math
 FILE_URL = "https://gist.githubusercontent.com/Hikita1337/9c4f2873fa373fa343fc02e84ab86dda/raw/f959ae8767bf4a55b361186d1ebec8be8e5c8584/timeline1.txt"
 
 OUTPUT_DIR = "."  # сохраняем части в корень репозитория
-PARTS = 3         # количество частей
+PARTS = 2         # количество частей
 
 # --------------------------------------
 # СКАЧИВАНИЕ ФАЙЛА
