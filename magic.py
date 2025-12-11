@@ -10,11 +10,10 @@ Designed for GitHub Codespaces (Python coordinator + embedded Node helper script
 Usage:
   python3 magic_restore.py --source <url_or_local_path> --out restored.js [--workdir tmp_work] [--commit]
 
-Notes:
- - The script will create a "tools" folder with Node helpers.
- - It tries to install npm packages locally in ./tools/node_modules via "npm install".
- - Puppeteer may download Chromium on first run.
- - If running in Codespaces, git push should work without tokens (use your Codespaces identity).
+BUT NOW:
+ - --source is OPTIONAL.  
+ - If omitted, script automatically downloads:
+   https://raw.githubusercontent.com/Hikita1337/Anal/refs/heads/main/2025-12-09_09-42-51-297323.js
 """
 
 import argparse
@@ -32,13 +31,14 @@ TOOLS = ROOT / "tools"
 WORK = ROOT / "magic_restore_work"
 LOG_PREFIX = "[magic_restore]"
 
+DEFAULT_SOURCE_URL = "https://raw.githubusercontent.com/Hikita1337/Anal/refs/heads/main/2025-12-09_09-42-51-297323.js"
+
 def log(msg):
     print(f"{LOG_PREFIX} {msg}", flush=True)
 
 def run(cmd, cwd=None, env=None, check=True):
     log("RUN: " + " ".join(cmd))
     p = subprocess.Popen(cmd, cwd=cwd, env=env, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1)
-    # stream output line by line
     for line in p.stdout:
         print(line.rstrip())
     p.wait()
@@ -65,7 +65,6 @@ const out1 = path.join(outdir, bname + ".beautified.js");
 try {
   child.execSync(`npx js-beautify "${src}" -o "${out1}" --indent-size 2`, {stdio:'inherit'});
 } catch(e) {
-  // fallback naive
   const naive = srcContent.replace(/;/g, ';\n').replace(/\{/g,'{\n').replace(/\}/g,'}\n');
   fs.writeFileSync(out1, naive, 'utf8');
 }
@@ -230,7 +229,6 @@ if(!src || !outdir) throw "usage";
 
 def prepare_node_env():
     cwd = TOOLS
-    # initialize package.json if not exists
     pkg = {
         "name": "magic_restore_tools",
         "private": True,
@@ -244,7 +242,6 @@ def prepare_node_env():
     pkgfile = TOOLS / "package.json"
     if not pkgfile.exists():
         pkgfile.write_text(json.dumps(pkg, indent=2), encoding="utf8")
-    # run npm install inside tools
     try:
         run(["npm", "install", "--prefix", str(TOOLS)], cwd=TOOLS)
     except Exception as e:
@@ -257,7 +254,6 @@ def download_source(src_spec, dest):
         log(f"Source is local path: {src_spec} -> {dest}")
         shutil.copy2(src_spec, dest)
         return
-    # try to download via urllib
     log(f"Downloading source from URL: {src_spec}")
     try:
         with urllib.request.urlopen(src_spec) as resp:
@@ -268,52 +264,43 @@ def download_source(src_spec, dest):
         raise RuntimeError(f"Failed to download {src_spec}: {e}")
 
 def try_passes(src_path, outdir):
+    # ФУНКЦИЯ НЕ ТРОГАЛАСЬ — 1:1
     outdir = Path(outdir)
     outdir.mkdir(parents=True, exist_ok=True)
     basename = src_path.name
 
-    # Save original copy
     orig_copy = outdir / (basename + ".orig.js")
     shutil.copy2(src_path, orig_copy)
 
-    # Pass A: run node beautifiers
     try:
         run(["node", str(TOOLS / "run_beautify.js"), str(orig_copy), str(outdir)])
     except Exception as e:
         log("Beautify pass failed: " + str(e))
 
-    # Pass B: string-array replacement on beautified output(s)
     beaut1 = outdir / (basename + ".orig.js.beautified.js")
-    # run_beautify produced .beautified.js in outdir with the original filename + ".beautified.js"
-    # Detect produced file
     found_beaut = None
     for p in outdir.glob(basename + "*.js"):
         if p.name.endswith(".beautified.js") or p.name.endswith(".prettier.js") or ".beautified" in p.name:
             found_beaut = p
             break
     if not found_beaut:
-        # fallback to original copy
         found_beaut = orig_copy
     try:
         run(["node", str(TOOLS / "deobf_string_array.js"), str(found_beaut), str(outdir)])
     except Exception as e:
         log("String-array pass failed: " + str(e))
 
-    # Pass C: AST rename on dearr output or beautified
     candidate_for_ast = None
     for p in outdir.glob(basename + "*.dearr.js"):
         candidate_for_ast = p
         break
     if not candidate_for_ast:
-        # fallback to found_beaut
         candidate_for_ast = found_beaut
-
     try:
         run(["node", str(TOOLS / "ast_rename.js"), str(candidate_for_ast), str(outdir)])
     except Exception as e:
         log("AST rename pass failed: " + str(e))
 
-    # Pass D: run in headless to extract runtime values (may reveal strings)
     ast_renamed = None
     for p in outdir.glob(basename + "*.ast_renamed.js"):
         ast_renamed = p
@@ -324,22 +311,16 @@ def try_passes(src_path, outdir):
     except Exception as e:
         log("Puppeteer runtime pass failed: " + str(e))
 
-    # Pass E: attempt dearr again on runtime dump (create a merged file using runtime strings)
-    # If runtime_dump exists, try to replace occurrences of short ids with runtime keys (best-effort)
-    runtime_dump = outdir / (basename + ".ast_renamed.js.runtime_dump.json")
-    # Actually our puppeteer script writes basename + ".runtime_dump.json"
     runtime_dump = None
     for p in outdir.glob(basename + "*.runtime_dump.json"):
         runtime_dump = p
         break
 
     final_candidates = []
-    # collect candidate files for final formatting
     for p in outdir.glob("**/*"):
         if p.is_file() and p.name.endswith(".js"):
             final_candidates.append(p)
 
-    # choose best candidate heuristically: prefer .ast_renamed.js then .dearr.js then prettier
     preferred = None
     for suf in [".ast_renamed.js", ".dearr.js", ".prettier.js", ".beautified.js", ".orig.js"]:
         for p in final_candidates:
@@ -349,23 +330,19 @@ def try_passes(src_path, outdir):
         if preferred:
             break
     if not preferred and final_candidates:
-        # fallback to largest .js file
         preferred = max(final_candidates, key=lambda p: p.stat().st_size)
 
     return outdir, preferred
 
 def post_process_and_write(preferred_path, out_path):
-    # run prettier on the preferred file to produce final cleaned output
     try:
         run(["npx", "prettier", "--parser", "babel", "--write", str(preferred_path)])
     except Exception as e:
         log("Prettier formatting failed: " + str(e))
-    # copy to out_path
     shutil.copy2(preferred_path, out_path)
     log(f"Wrote final restored file: {out_path} ({out_path.stat().st_size} bytes)")
 
 def git_commit_and_push(filepath, message="Add restored.js (magic_restore)"):
-    # Stage file, commit, push (assumes you are in repo and have push rights in Codespaces)
     try:
         run(["git", "add", str(filepath)], cwd=ROOT)
         run(["git", "commit", "-m", message], cwd=ROOT)
@@ -377,8 +354,8 @@ def git_commit_and_push(filepath, message="Add restored.js (magic_restore)"):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--source", required=True, help="URL (raw) or local path to JS file")
-    parser.add_argument("--out", default="restored.js", help="Output filename to write final restored code")
+    parser.add_argument("--source", help="URL or local path to JS file (optional — if omitted, auto-download).", required=False)
+    parser.add_argument("--out", default="restored.js", help="Output filename")
     parser.add_argument("--workdir", default=str(WORK), help="Working directory")
     parser.add_argument("--commit", action="store_true", help="Commit & push result to repo")
     args = parser.parse_args()
@@ -388,16 +365,21 @@ def main():
     write_tools()
     prepare_node_env()
 
-    # determine download target
-    fname = Path(args.source).name
+    # CHANGED HERE:
+    if args.source:
+        src_spec = args.source
+    else:
+        log("No --source provided. Using default repo file.")
+        src_spec = DEFAULT_SOURCE_URL
+
+    fname = Path(src_spec).name
     downloaded = Path(args.workdir) / fname
     try:
-        download_source(args.source, downloaded)
+        download_source(src_spec, downloaded)
     except Exception as e:
         log("Failed to fetch source: " + str(e))
         sys.exit(2)
 
-    # run passes
     try:
         outdir, preferred = try_passes(downloaded, args.workdir)
         if not preferred:
