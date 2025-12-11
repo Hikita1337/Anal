@@ -11,8 +11,8 @@ TOKEN_FILE_URL = "https://drive.google.com/uc?id=1tuUxUWEfumOsUdJEk5q48SW5xlLXc1
 LOCAL_TOKEN_FILE = "github_token.txt"
 REPO_URL = "https://github.com/Hikita1337/Anal.git"  # URL репозитория
 LOCAL_REPO_DIR = "AnalRepo"  # временная папка для клона
-FILE_PATH_IN_REPO = "History/timeline1.txt"  # путь к файлу внутри репозитория
-GIST_DESCRIPTION = "Полный timeline1.txt для анализа API"
+FILE_PATH_IN_REPO = "restored.js"  # путь к файлу внутри репозитория
+GIST_DESCRIPTION = "Полный restored.js для анализа API"
 GIST_PUBLIC = True  # True = публичный Gist, False = приватный
 
 # -----------------------------
