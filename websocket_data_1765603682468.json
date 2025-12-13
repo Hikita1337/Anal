@@ -1,0 +1,2479 @@
+[
+  {
+    "time": "2025-12-13T05:27:14.291Z",
+    "data": {
+      "id": 19,
+      "connect": {
+        "client": "4953a237-08e7-44a8-84aa-49364f521460",
+        "version": "6.3.1 OSS",
+        "ping": 25,
+        "pong": true
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.292Z",
+    "data": {
+      "id": 20,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.292Z",
+    "data": {
+      "id": 21,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.292Z",
+    "data": {
+      "id": 22,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.292Z",
+    "data": {
+      "id": 23,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.292Z",
+    "data": {
+      "id": 24,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.292Z",
+    "data": {
+      "id": 25,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.292Z",
+    "data": {
+      "id": 26,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.292Z",
+    "data": {
+      "id": 27,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.298Z",
+    "data": {
+      "id": 28,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.298Z",
+    "data": {
+      "id": 29,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.298Z",
+    "data": {
+      "id": 30,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.298Z",
+    "data": {
+      "id": 31,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:14.298Z",
+    "data": {
+      "id": 32,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:15.290Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 40
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:16.221Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 38
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:16.533Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250759,
+              "status": 4,
+              "bettingTime": -8032,
+              "endTime": -32,
+              "randomOffset": 0.8662446652654204,
+              "randomNumber": 7,
+              "spinNumber": 7,
+              "winnerNumber": 1,
+              "multiplier": null,
+              "multiplierNumber": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:17.092Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 38
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:19.217Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 38
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:19.535Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "updateJackpot",
+            "jackpot": {
+              "id": 8561,
+              "amount": 2.909999999999996,
+              "payload": [
+                3,
+                3,
+                2
+              ],
+              "status": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:19.558Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250760,
+              "status": 1,
+              "bettingTime": 10000,
+              "endTime": 18000,
+              "randomOffset": 0.5293397279767181,
+              "randomNumber": null,
+              "spinNumber": null,
+              "winnerNumber": null,
+              "multiplier": null,
+              "multiplierNumber": null
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:19.654Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250760,
+              "status": 2,
+              "bettingTime": 9898,
+              "endTime": 17898,
+              "randomOffset": 0.5293397279767181,
+              "randomNumber": null,
+              "spinNumber": null,
+              "winnerNumber": null,
+              "multiplier": null,
+              "multiplierNumber": null
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:20.151Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 0,
+              "totalItems": 0,
+              "totalDeposit": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:20.170Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800635,
+                "number": 2,
+                "status": 1,
+                "deposit": 3,
+                "walletDeposit": 3,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2549240,
+                  "name": "f1xa4",
+                  "avatar": "https://avatars.steamstatic.com/61b3e94866bc2a8ae450df41a2e8d5846146a83a_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:20.493Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 1,
+              "totalItems": 0,
+              "totalDeposit": 3
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:20.577Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800636,
+                "number": 1,
+                "status": 1,
+                "deposit": 0.4399999976158142,
+                "walletDeposit": 0.44,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 3944793,
+                  "name": "Tema Morgan",
+                  "avatar": "https://avatars.steamstatic.com/6868ba2e880d49d4fb41c3cfb89287bd928d7e0d_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:20.892Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 2,
+              "totalItems": 0,
+              "totalDeposit": 3.439999997615814
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:22.093Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800637,
+                "number": 3,
+                "status": 1,
+                "deposit": 0.5,
+                "walletDeposit": 0.5,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 1158234,
+                  "name": "snxs",
+                  "avatar": "https://avatars.steamstatic.com/d9cf5de4ea363bde69d9dc522a47ad77b39c2d9f_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:22.197Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 106
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 38
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:22.414Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 3,
+              "totalItems": 0,
+              "totalDeposit": 3.939999997615814
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:23.093Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 38
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:23.691Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "online",
+            "count": 2773
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:24.013Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 106
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 40
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:24.153Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800638,
+                "number": 3,
+                "status": 1,
+                "deposit": 1,
+                "walletDeposit": 1,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2549240,
+                  "name": "f1xa4",
+                  "avatar": "https://avatars.steamstatic.com/61b3e94866bc2a8ae450df41a2e8d5846146a83a_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:24.492Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 4,
+              "totalItems": 0,
+              "totalDeposit": 4.939999997615814
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:24.596Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800639,
+                "number": 2,
+                "status": 1,
+                "deposit": 1.440000057220459,
+                "walletDeposit": 1.44,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2383632,
+                  "name": "ecklipsss",
+                  "avatar": "https://avatars.steamstatic.com/6aa70c9243a677b8835a238dd619e85d34bcdf41_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:24.893Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 5,
+              "totalItems": 0,
+              "totalDeposit": 6.380000054836273
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:25.189Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 106
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:25.730Z",
+    "data": {
+      "id": 33,
+      "unsubscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:26.092Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 104
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:26.990Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:27.059Z",
+    "data": {
+      "id": 34,
+      "subscribe": {}
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:27.370Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800640,
+                "number": 3,
+                "status": 1,
+                "deposit": 0.36000001430511475,
+                "walletDeposit": 0.36,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2383632,
+                  "name": "ecklipsss",
+                  "avatar": "https://avatars.steamstatic.com/6aa70c9243a677b8835a238dd619e85d34bcdf41_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              },
+              {
+                "id": 133800641,
+                "number": 3,
+                "status": 1,
+                "deposit": 1,
+                "walletDeposit": 1,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 1148852,
+                  "name": "2grammavkarmane",
+                  "avatar": "https://avatars.steamstatic.com/8b29bec7cd00a230194e4aeaed9157a5443db198_medium.jpg",
+                  "isVip": true,
+                  "blm": false
+                },
+                "items": [
+                  {
+                    "id": 8176073569,
+                    "itemId": 47219,
+                    "name": "Souvenir PP-Bizon | Breaker Box (Well-Worn)",
+                    "colorId": 2,
+                    "gameId": 730,
+                    "reservedId": 17774
+                  }
+                ],
+                "itemsCount": 1
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:27.659Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 7,
+              "totalItems": 1,
+              "totalDeposit": 7.740000069141388
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:28.198Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:29.092Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:29.571Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250760,
+              "status": 3,
+              "bettingTime": -11,
+              "endTime": 7988,
+              "randomOffset": 0.5293397279767181,
+              "randomNumber": 3,
+              "spinNumber": 3,
+              "winnerNumber": 1,
+              "multiplier": 1.2,
+              "multiplierNumber": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:30.013Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:32.132Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 40
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:36.013Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 106
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 40
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:36.058Z",
+    "data": {}
+  },
+  {
+    "time": "2025-12-13T05:27:37.215Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 54
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 26
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 144
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:37.653Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250760,
+              "status": 4,
+              "bettingTime": -8064,
+              "endTime": -64,
+              "randomOffset": 0.5293397279767181,
+              "randomNumber": 3,
+              "spinNumber": 3,
+              "winnerNumber": 1,
+              "multiplier": 1.2,
+              "multiplierNumber": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:38.132Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 44
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:39.014Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 46
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:40.214Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 44
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:40.654Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "updateJackpot",
+            "jackpot": {
+              "id": 8561,
+              "amount": 2.929999999999996,
+              "payload": [
+                3,
+                3,
+                2
+              ],
+              "status": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:40.661Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250761,
+              "status": 1,
+              "bettingTime": 10000,
+              "endTime": 18000,
+              "randomOffset": 0.20191815185829418,
+              "randomNumber": null,
+              "spinNumber": null,
+              "winnerNumber": null,
+              "multiplier": null,
+              "multiplierNumber": null
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:40.772Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250761,
+              "status": 2,
+              "bettingTime": 9899,
+              "endTime": 17899,
+              "randomOffset": 0.20191815185829418,
+              "randomNumber": null,
+              "spinNumber": null,
+              "winnerNumber": null,
+              "multiplier": null,
+              "multiplierNumber": null
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:41.295Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 0,
+              "totalItems": 0,
+              "totalDeposit": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:42.012Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:42.432Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800642,
+                "number": 1,
+                "status": 1,
+                "deposit": 0.8799999952316284,
+                "walletDeposit": 0.88,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 3944793,
+                  "name": "Tema Morgan",
+                  "avatar": "https://avatars.steamstatic.com/6868ba2e880d49d4fb41c3cfb89287bd928d7e0d_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:42.732Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 1,
+              "totalItems": 0,
+              "totalDeposit": 0.8799999952316284
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:43.688Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "online",
+            "count": 2778
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:43.997Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800643,
+                "number": 3,
+                "status": 1,
+                "deposit": 1,
+                "walletDeposit": 1,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2549240,
+                  "name": "f1xa4",
+                  "avatar": "https://avatars.steamstatic.com/61b3e94866bc2a8ae450df41a2e8d5846146a83a_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              },
+              {
+                "id": 133800644,
+                "number": 2,
+                "status": 1,
+                "deposit": 2.880000114440918,
+                "walletDeposit": 2.88,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2383632,
+                  "name": "ecklipsss",
+                  "avatar": "https://avatars.steamstatic.com/6aa70c9243a677b8835a238dd619e85d34bcdf41_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:44.098Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 40
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:44.295Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 3,
+              "totalItems": 0,
+              "totalDeposit": 4.760000109672546
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:44.651Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800645,
+                "number": 1,
+                "status": 1,
+                "deposit": 10,
+                "walletDeposit": 10,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2032620,
+                  "name": "hue",
+                  "avatar": "https://avatars.steamstatic.com/86437eb92bf4d2287969941f77c2c8ecb460d786_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:44.971Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 4,
+              "totalItems": 0,
+              "totalDeposit": 14.760000109672546
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:44.999Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 114
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 40
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:45.451Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800646,
+                "number": 3,
+                "status": 1,
+                "deposit": 1,
+                "walletDeposit": 1,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 1148852,
+                  "name": "2grammavkarmane",
+                  "avatar": "https://avatars.steamstatic.com/8b29bec7cd00a230194e4aeaed9157a5443db198_medium.jpg",
+                  "isVip": true,
+                  "blm": false
+                },
+                "items": [
+                  {
+                    "id": 8176073570,
+                    "itemId": 55656,
+                    "name": "Sticker | niko (Glitter)  | Paris 2023",
+                    "colorId": 3,
+                    "gameId": 730,
+                    "reservedId": 21216
+                  }
+                ],
+                "itemsCount": 1
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:45.731Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 5,
+              "totalItems": 1,
+              "totalDeposit": 15.760000109672546
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:46.212Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 114
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 38
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:47.107Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800647,
+                "number": 2,
+                "status": 1,
+                "deposit": 4,
+                "walletDeposit": 4,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2549240,
+                  "name": "f1xa4",
+                  "avatar": "https://avatars.steamstatic.com/61b3e94866bc2a8ae450df41a2e8d5846146a83a_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              },
+              {
+                "id": 133800648,
+                "number": 3,
+                "status": 1,
+                "deposit": 0.36000001430511475,
+                "walletDeposit": 0.36,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2383632,
+                  "name": "ecklipsss",
+                  "avatar": "https://avatars.steamstatic.com/6aa70c9243a677b8835a238dd619e85d34bcdf41_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:47.380Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 7,
+              "totalItems": 1,
+              "totalDeposit": 20.12000012397766
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:48.019Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 112
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 38
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:49.212Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 112
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 40
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:50.132Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 112
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 44
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:50.697Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250761,
+              "status": 3,
+              "bettingTime": -12,
+              "endTime": 7988,
+              "randomOffset": 0.20191815185829418,
+              "randomNumber": 1,
+              "spinNumber": 1,
+              "winnerNumber": 1,
+              "multiplier": null,
+              "multiplierNumber": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:50.879Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "newBets",
+            "bets": [
+              {
+                "id": 133800649,
+                "number": 3,
+                "status": 1,
+                "deposit": 0.18000000715255737,
+                "walletDeposit": 0.18,
+                "currencyId": 2,
+                "withdraw": null,
+                "walletWithdraw": null,
+                "user": {
+                  "id": 2383632,
+                  "name": "ecklipsss",
+                  "avatar": "https://avatars.steamstatic.com/6aa70c9243a677b8835a238dd619e85d34bcdf41_medium.jpg",
+                  "blm": false
+                },
+                "items": [],
+                "itemsCount": 0
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:51.212Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 8,
+              "totalItems": 1,
+              "totalDeposit": 20.30000013113022
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:53.253Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 112
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:54.014Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:56.132Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 40
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:27:58.697Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250761,
+              "status": 4,
+              "bettingTime": -8035,
+              "endTime": -35,
+              "randomOffset": 0.20191815185829418,
+              "randomNumber": 1,
+              "spinNumber": 1,
+              "winnerNumber": 1,
+              "multiplier": null,
+              "multiplierNumber": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:28:01.094Z",
+    "data": {}
+  },
+  {
+    "time": "2025-12-13T05:28:01.235Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 110
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:28:01.732Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "updateJackpot",
+            "jackpot": {
+              "id": 8561,
+              "amount": 2.949999999999996,
+              "payload": [
+                3,
+                3,
+                2
+              ],
+              "status": 1
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:28:01.736Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250762,
+              "status": 1,
+              "bettingTime": 10000,
+              "endTime": 18000,
+              "randomOffset": 0.6257136842742017,
+              "randomNumber": null,
+              "spinNumber": null,
+              "winnerNumber": null,
+              "multiplier": null,
+              "multiplierNumber": null
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:28:01.833Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "update",
+            "round": {
+              "id": 6250762,
+              "status": 2,
+              "bettingTime": 9899,
+              "endTime": 17899,
+              "randomOffset": 0.6257136842742017,
+              "randomNumber": null,
+              "spinNumber": null,
+              "winnerNumber": null,
+              "multiplier": null,
+              "multiplierNumber": null
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:28:02.131Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:main",
+        "pub": {
+          "data": {
+            "type": "gameStatistics",
+            "gameStatistics": {
+              "crash": {
+                "type": "crash",
+                "amount": 44.459510494470585,
+                "count": 56
+              },
+              "double": {
+                "type": "double",
+                "amount": 53.96106008440256,
+                "count": 108
+              },
+              "jackrun": {
+                "type": "jackrun",
+                "amount": 0.13042879104614258,
+                "count": 22
+              },
+              "rollrun": {
+                "type": "rollrun",
+                "amount": 0,
+                "count": 146
+              },
+              "box": {
+                "type": "box",
+                "amount": 0,
+                "count": 42
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "time": "2025-12-13T05:28:02.371Z",
+    "data": {
+      "push": {
+        "channel": "csgorun:roulette",
+        "pub": {
+          "data": {
+            "type": "statistic",
+            "statistic": {
+              "count": 0,
+              "totalItems": 0,
+              "totalDeposit": 0
+            }
+          }
+        }
+      }
+    }
+  }
+]
